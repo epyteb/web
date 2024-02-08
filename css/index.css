@@ -1,4 +1,5 @@
 @import url(./reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 
 header {
     position: absolute;
@@ -8,7 +9,7 @@ header {
 }
 
 header>div {
-    width: 1320px;
+    width: var(--size);
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -67,4 +68,58 @@ header>div>nav>a {
     display: inline-block;
     padding: 20px 40px;
     margin-top: 30px;
+}
+
+.service {
+    margin: 96px auto;
+    width: var(--size);
+    text-align: center;
+
+}
+
+.service > h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.service > p {
+    font-family: 'Roboto Slab', serif;
+}
+
+.service > div {
+    display: flex;
+    margin: 64px 0;
+    justify-content: space-between;
+}
+
+.service > div > article {
+    width: 30%;
+    text-align: center;
+}
+.service > div > article::before {
+    content: 'home';
+    font-family: material symbols outlined;
+    background-color: var(--point-color);
+    width: 128px;
+    height: 128px;
+    border-radius: 100%;
+    color: var(--white-color); 
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 16px;
+}
+.service > div > article::before:nth-of-type(2) {
+    content: 'menu';
+}
+.service > div > article::before:nth-of-type(3) {
+    content: 'close';
+}
+.service > div > article > h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+.service > div > article > p {
+    margin: 16px 0;
+    font-family: 'Roboto Slab', serif;
 }
